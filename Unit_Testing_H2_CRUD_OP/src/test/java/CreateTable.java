@@ -5,6 +5,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class CreateTable {
@@ -55,6 +57,10 @@ public class CreateTable {
         last = kb.nextLine();
         System.out.print("Enter Age : ");
         age = kb.nextInt();*/
+        org.example.CreateTable table=new org.example.CreateTable();
+        Map<String,Object> parameters=new HashMap<>();
+        parameters.put("account",20);
+        table.updateTable(abc,)
 
         String sql = "INSERT INTO std6 (id, first, last, age) VALUES (1, ?, ?, ?)";
         PreparedStatement preparedStatement = conn.prepareStatement(sql);
